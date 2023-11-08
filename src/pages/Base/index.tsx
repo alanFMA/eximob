@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from '../../components/Header';
 
 const Base: React.FC = () => (
   <div>
-    <h1>Oi</h1>
+    <main>
+      <Header />
+    </main>
   </div>
 );
 

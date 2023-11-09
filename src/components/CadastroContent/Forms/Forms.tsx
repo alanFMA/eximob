@@ -85,6 +85,7 @@ export default function InputWithIcon() {
       <Box
         sx={{
           width: '60%',
+          height: '100%',
           display: 'flex',
           flexDirection: 'column',
           padding: '3% 0',
@@ -109,7 +110,7 @@ export default function InputWithIcon() {
         <Box
           mt={4}
           sx={{
-            width: '60%',
+            width: '75%',
             '@media (max-width: 901px)': {
               width: '75%',
             },
@@ -152,7 +153,7 @@ export default function InputWithIcon() {
         <Box
           mt={2}
           sx={{
-            width: '60%',
+            width: '75%',
             '@media (max-width: 901px)': {
               width: '75%',
             },
@@ -195,7 +196,7 @@ export default function InputWithIcon() {
         <Box
           mt={2}
           sx={{
-            width: '60%',
+            width: '75%',
             '@media (max-width: 901px)': {
               width: '75%',
             },

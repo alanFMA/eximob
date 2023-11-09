@@ -13,5 +13,6 @@ export const Container = styled.div`
   z-index: 1;
   @media screen and (max-width: 901px) {
     width: 95%;
+    margin: 20px auto;
   }
 `;

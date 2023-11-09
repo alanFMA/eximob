@@ -91,7 +91,7 @@ export default function InputWithIcon() {
           alignItems: 'center',
           backgroundColor: '#1C1C1E',
           borderRadius: '15px',
-          '@media (max-width: 991px)': {
+          '@media (max-width: 901px)': {
             width: '90%',
           },
         }}
@@ -110,7 +110,7 @@ export default function InputWithIcon() {
           mt={4}
           sx={{
             width: '60%',
-            '@media (max-width: 991px)': {
+            '@media (max-width: 901px)': {
               width: '75%',
             },
           }}
@@ -153,7 +153,7 @@ export default function InputWithIcon() {
           mt={2}
           sx={{
             width: '60%',
-            '@media (max-width: 991px)': {
+            '@media (max-width: 901px)': {
               width: '75%',
             },
           }}
@@ -196,7 +196,7 @@ export default function InputWithIcon() {
           mt={2}
           sx={{
             width: '60%',
-            '@media (max-width: 991px)': {
+            '@media (max-width: 901px)': {
               width: '75%',
             },
           }}

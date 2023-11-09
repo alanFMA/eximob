@@ -16,11 +16,18 @@ export default createGlobalStyle`
     background-repeat: no-repeat;
     color: #FFF;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
   }
 
   body, input, button {
     font-family: 'Sora', sans-serif;
     font-size: 16px;
+  }
+
+  main {
+    max-width: 1366px;
+    height: 100vh;
   }
 
 

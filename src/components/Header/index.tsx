@@ -5,7 +5,6 @@ import Logo from '../../assets/logo.png';
 const Header: React.FC<any> = () => (
   <>
     <Container>
-      <img src={Logo} alt="" />
       <NavBar />
     </Container>
   </>

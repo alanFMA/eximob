@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -12,4 +13,5 @@ export const Container = styled.div`
     text-decoration: none;
     color: #fff;
   }
+  z-index: 1;
 `;

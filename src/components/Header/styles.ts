@@ -10,4 +10,5 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: row;
   color: #fff;
+  z-index: 1;
 `;

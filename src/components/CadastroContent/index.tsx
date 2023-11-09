@@ -1,10 +1,10 @@
 import { Forms } from './Forms';
-import { Container } from './styles';
+import { Container, TrofeuImage } from './styles';
 import Trofeu from '../../assets/trofeu.png';
 
 const CadastroContent: React.FC<any> = () => (
   <Container>
-    <img src={Trofeu} width="25%" alt="" />
+    <TrofeuImage src={Trofeu} />
     <Forms />
   </Container>
 );

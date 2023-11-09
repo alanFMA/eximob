@@ -4,8 +4,10 @@ import CadastroContent from '../../components/CadastroContent';
 
 const Base: React.FC = () => (
   <div>
-    <Header />
-    <CadastroContent />
+    <main>
+      <Header />
+      <CadastroContent />
+    </main>
   </div>
 );
 

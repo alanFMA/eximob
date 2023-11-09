@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const TextContent = styled.div`
-  width: 60%;
+  width: 75%;
   text-align: justify;
 
   p:first-child {

@@ -91,6 +91,9 @@ export default function InputWithIcon() {
           alignItems: 'center',
           backgroundColor: '#1C1C1E',
           borderRadius: '15px',
+          '@media (max-width: 991px)': {
+            width: '90%',
+          },
         }}
       >
         <TextContent>
@@ -103,7 +106,15 @@ export default function InputWithIcon() {
             abaixo para criar sua conta.
           </p>
         </TextContent>
-        <Box mt={4} sx={{ width: '60%' }}>
+        <Box
+          mt={4}
+          sx={{
+            width: '60%',
+            '@media (max-width: 991px)': {
+              width: '75%',
+            },
+          }}
+        >
           <TextField
             id="input-with-icon-textfield-name"
             placeholder="Nome Completo"
@@ -138,7 +149,15 @@ export default function InputWithIcon() {
             }}
           />
         </Box>
-        <Box mt={2} sx={{ width: '60%' }}>
+        <Box
+          mt={2}
+          sx={{
+            width: '60%',
+            '@media (max-width: 991px)': {
+              width: '75%',
+            },
+          }}
+        >
           <TextField
             id="input-with-icon-textfield-email"
             placeholder="Seu melhor e-mail"
@@ -173,7 +192,15 @@ export default function InputWithIcon() {
             }}
           />
         </Box>
-        <Box mt={2} sx={{ width: '60%' }}>
+        <Box
+          mt={2}
+          sx={{
+            width: '60%',
+            '@media (max-width: 991px)': {
+              width: '75%',
+            },
+          }}
+        >
           <TextField
             id="input-with-icon-textfield-phone"
             placeholder="Número de Telefone"

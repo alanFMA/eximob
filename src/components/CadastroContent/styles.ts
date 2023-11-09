@@ -21,8 +21,9 @@ export const TrofeuImage = styled.img`
 
   @media screen and (max-width: 901px) {
     max-width: 120px;
-    width: 15%;
+    width: 12%;
     position: absolute;
-    left: 15%;
+    left: 3%;
+    top: 20%;
   }
 `;

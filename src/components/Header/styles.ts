@@ -11,4 +11,7 @@ export const Container = styled.div`
   flex-direction: row;
   color: #fff;
   z-index: 1;
+  @media screen and (max-width: 991px) {
+    width: 95%;
+  }
 `;

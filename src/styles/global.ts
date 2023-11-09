@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import XBack from '../assets/x-back.png';
 
 export default createGlobalStyle`
   * {
@@ -10,6 +11,9 @@ export default createGlobalStyle`
 
   body {
     background: #000;
+    background-image: url(${XBack});
+    background-position: center;
+    background-repeat: no-repeat;
     color: #FFF;
     -webkit-font-smoothing: antialiased;
   }

@@ -14,19 +14,22 @@ const Container = styled.div`
   padding-bottom: 56.25%; /* Proporção de aspecto 16:9 (altura / largura) */
   overflow: hidden;
   margin: 0 5px;
-
   @media screen and (max-width: 901px) {
     width: 90%;
-    padding-bottom: 260px;
+    padding-bottom: 300px;
   }
 `;
 
 const VideoWrapper = styled.div`
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 901px) {
+    top: 0;
+  }
 `;
 
 const YouTubeVideo: React.FC<YouTubeVideoProps> = ({ videoId }) => {

@@ -94,6 +94,7 @@ export default function InputWithIcon() {
           borderRadius: '15px',
           '@media (max-width: 901px)': {
             width: '90%',
+            marginBottom: '20px',
           },
         }}
       >
@@ -104,7 +105,7 @@ export default function InputWithIcon() {
           <p>
             Estamos felizes em tê-lo aqui. Para aproveitar todos os recursos e
             benefícios da nossa comunidade, por favor, preencha o formulário
-            abaixo para criar sua conta.
+            abaixo e inscreva-se.
           </p>
         </TextContent>
         <Box
@@ -243,7 +244,7 @@ export default function InputWithIcon() {
             color="primary"
             sx={{ fontWeight: 'bold' }}
           >
-            CADASTRE-SE
+            INSCREVA-SE
           </Button>
         </Box>
       </Box>

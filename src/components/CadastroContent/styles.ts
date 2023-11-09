@@ -15,15 +15,3 @@ export const Container = styled.div`
     align-items: center;
   }
 `;
-
-export const TrofeuImage = styled.img`
-  width: 25%;
-
-  @media screen and (max-width: 901px) {
-    max-width: 120px;
-    width: 12%;
-    position: absolute;
-    left: 3%;
-    top: 20%;
-  }
-`;

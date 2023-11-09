@@ -8,6 +8,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 901px) {
+    margin-bottom: 5px;
+  }
 `;
 
 export const TextContent = styled.div`

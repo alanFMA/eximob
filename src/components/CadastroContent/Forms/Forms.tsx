@@ -6,6 +6,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import { Modal, Typography } from '@mui/material';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { TextContent } from './styles';
 
@@ -38,6 +40,7 @@ export default function Forms() {
   const [emailError, setEmailError] = useState('');
   const [nameError, setNameError] = useState('');
   const [phoneError, setPhoneError] = useState('');
+  const [openModal, setOpenModal] = useState(false);
 
   const handleInputEmailChange = ({
     target,
@@ -80,18 +83,45 @@ export default function Forms() {
     }
   };
 
+  const handleOpen = () => {
+    setOpenModal(true);
+  };
+
+  const handleClose = () => {
+    setOpenModal(false);
+  };
+
+  const modalStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    height: 400,
+    bgcolor: '#1C1C1E',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
   const HandleFormSubmit = () => {
     if (!nameError && !emailError && !phoneError) {
       const iframe = document.createElement('iframe');
       iframe.style.display = 'none';
       iframe.src = `https://docs.google.com/forms/d/e/1FAIpQLSfYwR1petegUsz_XolHKBguuWIR2kKN_Zeuog8XIbun9NGTIg/formResponse?entry.1281333293=${fullName}&entry.1906051504=${email}&entry.975664923=${phone}`;
       document.body.appendChild(iframe);
-      alert('Inscrição Realizada com Sucesso!');
+      setOpenModal(true);
+
+      setTimeout(() => {
+        setOpenModal(false);
+      }, 5000);
+
       setFullName('');
       setEmail('');
       setPhone('');
-    } else {
-      alert('Formulário contém erros.');
     }
   };
 
@@ -263,6 +293,28 @@ export default function Forms() {
             INSCREVA-SE
           </Button>
         </Box>
+        <Modal
+          open={openModal}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={modalStyle}>
+            <Typography
+              id="modal-modal-title"
+              variant="h6"
+              component="h2"
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'column',
+              }}
+            >
+              <CheckCircleIcon sx={{ color: 'green', fontSize: 50, mb: 1 }} />{' '}
+              Inscrição realizada com sucesso!
+            </Typography>
+          </Box>
+        </Modal>
       </Box>
     </ThemeProvider>
   );

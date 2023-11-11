@@ -31,7 +31,7 @@ const formatPhone = (value: string): string => {
   return formattedValue;
 };
 
-export default function InputWithIcon() {
+export default function Forms() {
   const [email, setEmail] = useState('');
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
@@ -77,6 +77,25 @@ export default function InputWithIcon() {
       setPhoneError('Número de telefone inválido');
     } else {
       setPhoneError('');
+    }
+  };
+
+  function refreshPage() {
+    window.location.reload();
+  }
+
+  const HandleFormSubmit = () => {
+    if (!nameError && !emailError && !phoneError) {
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = `https://docs.google.com/forms/d/e/1FAIpQLSfYwR1petegUsz_XolHKBguuWIR2kKN_Zeuog8XIbun9NGTIg/formResponse?entry.1281333293=${fullName}&entry.1906051504=${email}&entry.975664923=${phone}`;
+      document.body.appendChild(iframe);
+      window.alert('Inscrição Realizada com Sucesso!');
+      setFullName('');
+      setEmail('');
+      setPhone('');
+    } else {
+      window.alert('Formulário contém erros.');
     }
   };
 
@@ -243,6 +262,7 @@ export default function InputWithIcon() {
             variant="contained"
             color="primary"
             sx={{ fontWeight: 'bold' }}
+            onClick={HandleFormSubmit}
           >
             INSCREVA-SE
           </Button>
